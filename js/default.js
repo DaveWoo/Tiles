@@ -59,17 +59,21 @@ var pageInitModule = (function (mod) {
             $(this).parent().siblings().find(".sub-menu").slideUp();
             $(this).parent().find(".sub-menu").slideToggle();
         })
-        var _strcurrenturl = window.location.href.toLowerCase();
-        $(".navbar-nav a[href],.sidebar a[href]").each(function () {
-            var href = $(this).attr("href").toLowerCase();
+        var _frameUrl = undefined;
+        if ($("iframe[name='workingBench']")[0] !== undefined) {
+            _frameUrl = $("iframe[name='workingBench']")[0].src;
+        }
+
+        $(".sidebar a[href]").each(function () {
+            var href = $(this).attr("href");
             var isActive = false;
             $(".breadcrumb>li a[href]").each(function (index) {
-                if (href == $(this).attr("href").toLowerCase()) {
+                if (href == $(this).attr("href")) {
                     isActive = true;
                     return false;
                 }
             })
-            if (_strcurrenturl.indexOf(href) > -1 || isActive) {
+            if (_frameUrl.indexOf(href) > -1 || isActive) {
                 $(this).parent().addClass("active");
                 if ($(this).parents("ul").attr("class") == "sub-menu") {
                     $(this).parents("ul").slideDown();
@@ -80,3 +84,29 @@ var pageInitModule = (function (mod) {
     }
     return mod;
 })(window.pageInitModule || {});
+
+/* 左侧菜单 */
+function nav_left(navOjb) {
+
+    // 
+    var oItem = $('.nav>li>a>i[data-toggle="nav"]');
+    for (var i = 0; i < oItem.length; i++) {
+        oItem[i].className = 'fa fa-caret-right fa-fw pull-right';
+    }
+    if (navOjb.childNodes[1] != undefined ) {
+        navOjb.childNodes[1].className = 'fa fa-caret-down fa-fw pull-right';
+    }
+
+    var oItem = $('.nav li');
+    for (var i = 0; i < oItem.length; i++) {
+        $(oItem[i]).removeClass("active")
+        $(oItem[i]).find(".sub-menu").slideUp();
+    }
+
+    // high light - selected item
+    $(navOjb).parent().addClass("active");
+    if ($(navOjb).parents("ul").attr("class") == "sub-menu") {
+        $(navOjb).parents("ul").slideDown();
+        $(navOjb).parents(".has-sub").addClass("active");
+    }
+}
