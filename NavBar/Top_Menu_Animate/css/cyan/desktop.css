@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+/*** Start General ********************/
+li {
+	list-style: none;
+}
+a{
+	display:block;
+	text-decoration:none;
+}
+i {
+	display:block;
+}
+p, a, h3, h4{
+	font-family:'exodemi_bold', Geneva, sans-serif;
+}
+
+a, h3, h4{
+	text-transform:uppercase;
+}
+h3{
+	font-size:20px;
+}
+h4{
+	font-size:18px;
+}
+img{
+	padding:10px;
+	
+	box-shadow: 1px 1px 4px rgba(102,102,102,.4);
+	-webkit-box-shadow: 1px 1px 4px rgba(102,102,102,.4);
+	-moz-box-shadow: 1px 1px 4px rgba(102,102,102,.4);
+}
+/* For Phone & Tablet */
+.nav i.icon-chevron-down {
+	display: none;
+	visibility: hidden;
+}
+/*** End General ********************/
+
+/*** Start .nav Class ***************/
+.nav {
+	display: block;
+	position: relative;
+	width:1100px;
+	padding: 10px 10px 10px 50px;
+	margin: 10px auto;
+}
+.nav li {
+	position: relative;
+	display: block;
+	height: 60px;
+	width:120px;
+	float: left;
+	margin-right:10px;
+}
+.nav li a{
+	float: left;
+	height: 100%;
+	width: 100%;
+	padding: 11px 0px 0px 0px;
+	overflow: hidden;
+	
+	font-weight: normal;
+	text-align: center;
+	font-size: 16px;
+	line-height: 38px;
+	letter-spacing: 0.1em;
+}
+/*** End .nav Class ***************/
+
+/*** Start .one Class *************/
+.nav .one {
+	display: block;
+	position:absolute;
+	top: 100%;
+	left: -7%;
+	min-width:120px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.one > li{
+	float: none;
+	width:180px;
+	height:40px;
+}
+.nav .one > li a{
+	float:none;
+	width:150px;
+	height:20px;
+	padding:10px 0 10px 30px;
+	
+	text-align:left;
+	line-height: 20px;
+	font-size:13px;	
+}
+.one h3{
+	padding:3px 5px 10px 8px;
+}
+.one li i.icon-chevron-right{
+	float:right;
+	margin:4px 12px 0 0;
+}
+/*** End .one Class *****************/
+
+/*** Start .one #sub-menu ***********/
+.nav .one #sub-menu{
+	left: 100%;
+	top: 0%;
+}
+.one li:hover > #sub-menu {
+	left: 100%;
+	top: -24%;
+}
+/*** End .one #sub-menu *************/
+
+/*** Start #cover1 & #icon **********/
+#cover1,
+#icon{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	
+	transform-origin:50% 50%;
+	-webkit-transform-origin:50% 50%;
+	-moz-transform-origin:50% 50%;
+	-o-transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%;
+}
+#cover1{
+	visibility:hidden;
+}
+#icon{
+	z-index:50;
+	
+	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;	
+}
+#icon i{
+	font-size:34px;
+	padding:12px 40px;
+}
+
+/*** For Change Animation Effects ***/
+.nav li:hover #cover1 {
+	visibility:visible;
+
+	-webkit-animation-name: bounce;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-iteration-count: 1;
+}
+.nav li:hover #icon{
+	visibility:hidden;
+	
+	-webkit-animation-name: flip;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-iteration-count: 1;
+}
+.nav li:hover > ul.one {
+	-webkit-animation-name: zoomIn;       
+	-webkit-animation-duration: .4s;
+	-webkit-animation-iteration-count: 1;
+}
+/*** End #cover1 & #icon ***********/
+
+/*** Start About *******************/
+#about {
+	left:-220px;
+	overflow:hidden;
+}
+#about li {
+	width: 550px;
+	height: 300px;
+	padding: 10px;
+}
+#about li i{
+	padding:0 7px;
+}
+#about li p{
+	padding: 5px;
+	
+	line-height: 23px;
+	font-size: 14px;
+	text-align:justify;
+}
+#about img {
+	float: right;
+	margin: 30px 5px 5px 20px;
+}
+#about h6{
+	margin:15px 20px 10px 20px;
+	padding:10px;
+	
+	font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	font-size:13px;
+	font-style:italic;
+	line-height: 20px;
+}
+#about h6 i{
+	font-size:11px;
+}
+/*** End About ********************/
+
+/*** Start Contact ****************/
+#contact {
+	left:-200px;
+	overflow:hidden;
+	width: 630px;
+}
+#contact li {
+	overflow:hidden;
+	height: 270px;
+	padding: 10px;
+}
+
+/*Part-Left*/
+#contact li#part-left{
+	width:300px;
+	float:left;
+}
+#contact li#part-left p{
+	font-size:14px;
+	line-height:22px;
+}
+#contact li#part-left h3{
+	margin-bottom:10px;
+}
+#contact li#part-left p strong{
+	text-transform:uppercase;
+}
+
+/*Part-Right*/
+#contact li#part-right{
+	width:270px;
+	float:right;
+}
+#contact li#part-right input{
+	height:27px;
+}
+#contact li#part-right textarea{
+	height:80px;
+}
+#contact li#part-right input,
+#contact li#part-right textarea{
+	width:90%;
+	margin-left:10px;
+	border:none;
+	
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	
+	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+}
+#contact li#part-right p{
+	padding:3px 0;
+	
+	font-size:13px;
+	line-height: 23px;
+}
+#contact li#part-right input#send{
+	width:70px;
+	height:27px;
+	margin-top:10px;
+	margin-left:20px;
+	
+	box-shadow:none;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+}
+
+/*Social Network*/
+#h4-social {
+	margin: 30px 0 10px 5px;
+}
+#contact li#part-left > a {
+	height: 50px;
+	width: 48px;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+#contact li#part-left a > i {
+	margin: 0 1px;
+	padding: 0;
+	
+	font-size: 40px;
+	
+	transition: all .3s;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	-ms-transition: all .3s;
+}
+#contact li#part-left a:hover i {
+	font-size: 43px;	
+}
+/*** End Contact *******************/
+
+/* Start #Search  ****************/
+#search {
+	float: right;
+	display: block;
+	width:230px;
+	
+	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;	
+}
+#search a{
+	width:30px;
+}
+#search i {
+	padding-top:4px;
+	float:right;
+	
+	font-size:22px;
+}
+#search input {
+	float:left;
+	width:135px;
+	padding: 5px;
+	margin: 15px 10px 25px 30px;
+	border:none;
+	
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	
+	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;	
+}
+/* End #Search **********************/

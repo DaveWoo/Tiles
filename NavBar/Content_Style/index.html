@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery新闻列表滚动下一级代码 - xw素材网</title>
+<link rel="stylesheet" type="text/css" href="css/ideaboxNews.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
+<script src="js/jQuery.js"></script>
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
+</head>
+<style>
+body{font-family:Ubuntu, Arial, Helvetica, sans-serif; font-size:16px; font-weight:400; padding:0; margin:0; }
+.container{width:30%; height:auto; margin:100px auto 0 auto;}
+header{width:100%; min-height:100px; padding:20px; background:url(trash/bgnoise_lg.png); text-align:center; border-bottom:solid 2px #333; box-sizing:border-box;}
+header h1{font-weight:normal; font-size:36px; padding:0; margin:0;}
+header h3{padding:0; margin:0;}
+header .examples{width:100%; height:auto; padding:20px 0;}
+header .examples a{display:inline-block; padding:10px 20px; background:#333; text-decoration:none; color:#FFF;}
+header .examples a.active{background:#C00;}
+.example_img{width:100%; text-align:center; padding:20px; box-sizing:border-box; background:#333; margin-top:50px;}
+.example_img img{display:inline-block;}
+</style>
+<body>
+<div class="container">
+    <div class="ideaboxNews in-easing" id="idx1">
+    	<!--<h3>LATEST NEWS</h3>-->
+        <ul>
+        	<li>
+            	<div class="in-image">
+                	<img src="trash/img1.jpg">
+                    <span class="in-red"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>LOREM IPSUM DOLAR</h2>
+                    <span>10 APRIL 2015, SUNDAY</span>
+                    <div>
+                    111Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img3.jpg">
+                    <span class="in-turquoise"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>SIT AMET</h2>
+                    <span>11 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img7.jpg">
+                    <span class="in-yellow"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>text of the printing</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Aenean id rutrum libero, eu elementum enim. Quisque cursus mattis velit. Donec ac ex luctus, blandit ante vel, feugiat magna. Maecenas vitae nisi nulla.<br><br> Sed nibh risus, maximus in imperdiet in, auctor eget nisl. Nullam venenatis ac nunc a feugiat. Pellentesque nulla est, scelerisque id ligula non, convallis euismod odio. Proin tortor est, tincidunt ac libero consequat, venenatis pulvinar purus. Maecenas a feugiat velit<
+                    /div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img2.jpg">
+                    <span class="in-blue"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>ARE MANY VARIATIONS</h2>
+                    <span>13 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Maecenas vitae nisi nulla. Sed nibh risus, maximus in imperdiet in, auctor eget nisl. Nullam venenatis ac nunc a feugiat. <br><br>Pellentesque nulla est, scelerisque id ligula non, convallis euismod odio. Proin tortor est, tincidunt ac libero consequat, venenatis pulvinar purus. <br><br>Maecenas a feugiat velit. Aliquam quis sodales ligula, id rhoncus purus. Morbi ac justo ut eros lacinia volutpat. Donec id vestibulum lectus. Cras vitae velit mauris. Sed dignissim luctus tristique. Vivamus augue odio, ullamcorper egestas risus a, convallis ultricies velit.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img8.jpg">
+                    <span class="in-orange"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>SET UT PERSPICIATIS</h2>
+                    <span>14 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Donec et bibendum mauris, a pretium neque. Quisque dignissim non risus eu hendrerit. Ut finibus luctus erat at porttitor. Nam ut congue mauris. Mauris tempor eleifend nisi, eget bibendum purus vestibulum quis. Vestibulum aliquam dapibus porttitor. Quisque tempor non ex at tincidunt. Cras hendrerit nunc et ante hendrerit ultricies id quis quam.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img6.jpg">
+                    <span class="in-darkblue"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>simply dummy text of the</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Aenean semper maximus mi, eget laoreet odio ornare et. Vestibulum in neque nisl. Nam sodales rhoncus placerat. Fusce turpis ex, venenatis at sapien ac, eleifend eleifend ligula. Integer interdum dapibus sapien, at feugiat tortor facilisis non. <br><br>Aliquam vel diam volutpat, hendrerit leo fermentum, vehicula odio. Ut ac urna in nisi consectetur varius. Aliquam euismod cursus dolor, hendrerit auctor metus pulvinar et. Cras consequat enim id urna volutpat, at interdum nisi elementum. <br><br>Donec eget erat vitae nisi porta cursus nec vel lorem. Etiam luctus posuere diam, et congue lectus pharetra in. Praesent facilisis pharetra diam, in vestibulum augue laoreet quis. Mauris maximus fermentum vehicula. Aliquam vel nibh eu justo efficitur aliquet.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img9.jpg">
+                    <span class="in-yellow"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Praesent tristique accumsan</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Vestibulum id ex blandit, euismod magna a, ullamcorper enim. Aliquam porta justo eu diam venenatis consequat. Praesent tristique accumsan luctus. Sed dictum, nisl at condimentum mattis
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img10.jpg">
+                    <span class="in-orange"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>porttitor eu dui</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    Sed dictum, nisl at condimentum mattis, lectus nisl rutrum dolor, vitae dictum erat nunc id ex. Ut ipsum lorem, auctor eu interdum vel, mollis eget felis. Aliquam faucibus ullamcorper nibh, a vestibulum tellus rhoncus a. Sed eros odio, porttitor eu dui tempor, tempus rhoncus elit.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img11.jpg">
+                    <span class="in-grey"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Vestibulum neque urna</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	Nulla egestas eleifend arcu, quis venenatis libero imperdiet non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum neque urna, commodo nec dui nec, laoreet commodo neque. Donec posuere pretium dictum. Fusce eget quam at odio sagittis fermentum. Vestibulum mollis metus nisi, sit amet varius metus dapibus gravida. Morbi sed est sapien. Phasellus porta mauris id ullamcorper faucibus
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img12.jpg">
+                    <span class="in-red"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Etiam leo libero</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	Etiam leo libero, fermentum non efficitur non, faucibus non neque. Nulla accumsan mauris nisl, id malesuada sem ultrices eget. Cras ut scelerisque sem. Fusce nec mi non ipsum finibus gravida et sed mauris. Curabitur aliquet ornare urna, eget iaculis orci lacinia a. Cras vulputate tellus et erat sodales, vel pretium neque imperdiet. Maecenas imperdiet, velit non consequat rhoncus
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img13.jpg">
+                    <span class="in-turquoise"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Quisque et tempor diam</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	Nam porta lobortis mollis. Quisque et tempor diam. Quisque at ipsum id ipsum pretium interdum. Nunc sit amet purus sit amet sapien blandit finibus. Vivamus non orci diam. Fusce accumsan massa a convallis semper. Aliquam erat volutpat. Nulla neque est, suscipit quis sagittis a, rhoncus at felis.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img14.jpg">
+                    <span class="in-darkblue"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>simply dummy text of the</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam augue nec neque dapibus, at condimentum tellus ultrices. Duis semper varius nulla, sit amet aliquet sapien efficitur eu. Mauris convallis, augue placerat lacinia rhoncus, eros est congue mi, in vestibulum orci arcu maximus nulla. Mauris in blandit lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img15.jpg">
+                    <span class="in-purple"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>tellus augue tempus tellus</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	 Morbi pulvinar, metus in interdum elementum, tellus augue tempus tellus, eu condimentum quam leo in arcu. Donec urna felis, fringilla eu enim nec, elementum fermentum ex. Donec placerat, ante eget tempus aliquam, magna magna placerat dolor, vestibulum hendrerit velit nunc facilisis ligula. Integer nec diam justo. Etiam id tincidunt magna. Duis efficitur non massa et aliquet. Nullam vestibulum sem a convallis sollicitudin. Vestibulum finibus maximus ligula, vel tincidunt leo lobortis eget. Integer gravida scelerisque urna quis tristique.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img16.jpg">
+                    <span class="in-yellow"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>senectus et netus et malesuada</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi pulvinar, metus in interdum elementum, tellus augue tempus tellus, eu condimentum quam leo in arcu. Donec urna felis, fringilla eu enim nec, elementum fermentum ex. 
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img17.jpg">
+                    <span class="in-green"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Fusce eu quam</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	 Nullam id varius nulla, a varius eros. Fusce eu quam ac velit venenatis molestie vel eu libero. In hac habitasse platea dictumst. Suspendisse sagittis eget leo non porta.
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img18.jpg">
+                    <span class="in-orange"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Etiam leo libero</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	 Vestibulum mollis metus nisi, sit amet varius metus dapibus gravida. Morbi sed est sapien. Phasellus porta mauris id ullamcorper faucibus. Etiam leo libero, fermentum non efficitur non, faucibus non neque. Nulla accumsan mauris nisl, id malesuada sem ultrices eget
+                    </div>
+                </div>
+            </li>
+            <li>
+            	<div class="in-image">
+                	<img src="trash/img19.jpg">
+                    <span class="in-turquoise"><h6>Read more</h6></span>
+                </div>
+                <div class="in-content">
+                	<h2>Mauris tristique</h2>
+                    <span>12 APRIL 2015, SUNDAY</span>
+                    <div>
+                    	 Mauris tristique consectetur interdum. Suspendisse potenti. Donec eget elit vel quam sollicitudin vulputate. Nam pellentesque gravida ante a ultricies. Sed neque massa, pharetra sed turpis et, maximus luctus turpis. Nullam id varius nulla, a varius eros. Fusce eu quam ac velit venenatis molestie vel eu libero. In hac habitasse platea dictumst. Suspendisse sagittis eget leo non porta.
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="in-viewer">
+        	<div class="in-viewer-header">
+            	<img src="trash/img1.jpg">
+                <div>
+                	<h2>no title...</h2>
+                    <span>no date...</span>
+                </div>
+            </div>
+            <div class="in-viewer-content">
+            	no content...
+            </div>
+            <span class="in-viewer-close"></span>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(e) {
+	$(".ideaboxNews").ideaboxNews({
+		maxwidth		:'100%',
+		newscount		:5,
+		position		:'relative',
+		openspeed		:'fast'
+	});
+});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://www.xwcms.net/" target="_blank">xw素材网</a></p>
+</div>
+</body>
+</html>

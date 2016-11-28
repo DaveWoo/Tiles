@@ -1,0 +1,46 @@
+/*** Color **************************/
+
+a, i, h3, h4,
+.one a,
+.one p,
+.one li i.icon-chevron-right{
+	color:#ffffff;
+}
+.one h3,
+.one h4,
+.one i{
+	color:rgba(51,51,51,.6);
+}
+#contact li#part-left p strong{
+	color:rgba(51,51,51,.8);
+}
+/*** Background **************************/
+body{
+	background-image:url(../../img/bg.jpg);
+	background-repeat:repeat;	
+}
+img{
+	background-color:rgba(255,255,255,.3);
+}
+.one{
+	background-color:transparent;
+}
+.one li:hover > a{
+	background-color:rgba(51,51,51,.2);
+	color:#FFFFFF;	
+}
+h6{
+	background-color:rgba(255,255,255,.3);
+}
+#icon,
+#search{           /* Color 1 */
+	background-color:#2CC7FF;       
+}
+#cover1,
+.one li,
+#search:hover{     /* Color 2 */
+	background-color:#BBE700;
+}
+#contact > li#part-left:hover a{
+	background-color:transparent;
+}

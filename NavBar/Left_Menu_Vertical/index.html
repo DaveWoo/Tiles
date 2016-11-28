@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery+CSS3制作彩色垂直导航菜单效果-xw素材网</title> 
+	<link href="css/zzsc.css" rel="stylesheet" type="text/css"></link>
+	<script type="text/javascript" src="js/jquery-2.0.0.min.js" ></script>
+	<script>
+	$(document).ready(function() {
+		$('ul.form li a').click(
+			function(e) {
+				e.preventDefault(); // prevent the default action
+				e.stopPropagation; // stop the click from bubbling
+				$(this).closest('ul').find('.selected').removeClass('selected');
+				$(this).parent().addClass('selected');
+			});
+	});
+	</script>	
+</head>
+
+<body>
+	<h1>Vertical Menu</h1>
+	
+	<ul class="form">
+		<li><a class="profile" href="#"><i class="icon-user"></i>Edit Profile</a></li>
+		<li class="selected"><a class="messages" href="#"><i class="icon-envelope-alt"></i>Messages <em>5</em></a></li>
+		<li><a class="settings" href="#"><i class="icon-cog"></i>App Settings</a></li>
+		<li><a class="logout" href="#"><i class="icon-signout"></i>Logout</a></li>
+	</ul>
+
+</body>
+</html>

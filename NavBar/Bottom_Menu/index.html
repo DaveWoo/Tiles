@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jquery制作OSX底部工具箱导航菜单 - xw素材网</title>
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/jquery.foundation.mediaQueryToggle.js?1365615423" type="text/javascript"></script>
+		<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+		<link href="css/global.css?1365615423" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/zurb.topbar.css?1365615423" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/zurb.mega-drop.css?1365615423" media="screen" rel="stylesheet" type="text/css" />
+
+		 <style type="text/css">
+		/* Place all stylesheet code here */
+
+			body { background: #030611 url(images/maelstrom.png) center -100px no-repeat; padding: 0; }
+		
+		div#footer { padding: 0 0 36px; }
+	
+		div#pageHeader h1 { font-size: 45px; margin-bottom: 4px; color: #fff; text-shadow: 0px 2px 5px rgba(0,0,0,0.5); }
+		div#pageHeader p { font-size: 18px; line-height: 24px; margin-right: 25%; margin-bottom: 20px; color: #ccc; text-shadow: 0px 1px 2px rgba(0,0,0,0.5); }
+		div#pageHeader p small { font-size: 14px; line-height: 18px; color: #; opacity: .75; }
+
+		div.zurb.divider { background-image: url(images/zurb-divider.png); }
+
+		pre { background: #f5f5f5; margin: 0 0 18px; padding: 13px 18px 14px; -webkit-border-radius: 3px; -moz-border-radius: 3px; text-shadow: 0 1px 1px #fff; font-size: 11px; line-height: 16px; }
+		
+		code { background: rgba(0,0,0,.5); padding: 2px 3px; color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,.75); -webkit-border-radius: 3px; -moz-border-radius: 3px; }
+		
+		ol.code { background: rgba(0,0,0,.75); margin-bottom: 18px; border: solid rgba(0,0,0,.75); border-width: 1px 1px 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; -webkit-box-shadow: 0 1px 1px rgba(255,255,255,.5); }
+		ol.code li, ol.code li code { font-size: 14px !important; }
+		ol.code code { background: none; }
+
+
+		/* -------------------------------------------------- */
+		
+		div.cap { display: block; height: 100px; width: 40px; background: url(images/dock-background-left.png) bottom left no-repeat; }
+		
+		div.cap.left { position: absolute; bottom: 0px; left: 0px; }
+		div.cap.right { background-position: right bottom; position: absolute; top: 0px; right: 0px; }
+		ul.osx-dock { display: inline-block; height: 130px; padding: 0 40px 0 0; background: url(images/dock-background-left.png) no-repeat right bottom; overflow: hidden; margin: 0 0 0 40px; }
+		ul.osx-dock li { display: block; position: relative; float: left; width: 50px; height: 50px; margin: 60px 0 4px 0; -webkit-transition: 0.15s linear; -webkit-transition-property: -webkit-transform margin; text-align: center; }
+		
+		ul.osx-dock li a { display: block; height: 50px; padding: 0 1px; -webkit-transition: 0.15s linear; -webkit-transition-property: -webkit-transform margin; margin: 0;
+		-webkit-box-reflect: below 2px
+			-webkit-gradient(linear, left top, left bottom, from(transparent),
+			color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+		}
+		ul.osx-dock li a img { width: 48px; }
+		
+		ul.osx-dock li:hover { 
+			margin-left: 9px; margin-right: 9px;
+			z-index: 200;
+		}
+		ul.osx-dock li:hover a { 
+			-webkit-transform-origin: center bottom;
+			-webkit-transform: scale(1.5);
+		}
+		ul.osx-dock li.nearby { 
+			margin-left: 6px; margin-right: 6px;
+			z-index: 100;
+		}
+		ul.osx-dock li.nearby a { 
+			-webkit-transform-origin: center bottom;
+			-webkit-transform: scale(1.25);
+		}
+
+		ul.osx-dock li span { background: rgba(0,0,0,0.75); position: absolute; bottom: 80px; margin: 0 auto; display: none; width: auto; font-size: 11px; font-weight: bold; padding: 3px 6px; -webkit-border-radius: 6px; color: #fff; }
+		ul.osx-dock li:hover span { display: block; }
+		
+		div#dockContainer { position: fixed; bottom: 12px; height: 120px; padding: 50px 0 0; text-align: center; -webkit-border-radius: 6px; -moz-border-radius: 6px; width: 100%; line-height: 1; z-index: 100; }
+		div#dockWrapper { width: auto; display: inline-block; position: relative; border-bottom: solid 2px rgba(255,255,255,.35); line-height: 0; }
+
+    </style>
+
+
+	</head>
+	
+	<body id="osxDockPage" class=" ">
+
+	<!-- Platform Bar + Mega Drop Down -->
+	
+	<!-- Main Top Bar Navigation -->
+	
+      <div class="container" id="megaDrop">
+  <div class="mobile-main-nav-padding">
+
+
+    <div class="row">
+      <div class="tablet-padding">
+        <div class="three columns property" id="services">
+          <a>
+            <h4>Services</h4>
+            <p>We&#39;ll help you get online products designed better and faster 
+			than ever before and set you up for future iterations.</p>
+            <span>Let&#39;s Work Together →</span>
+          </a>
+        </div>
+        
+        <div class="show-on-phones"><br><br></div>
+        <div class="three columns property" id="foundation">
+          <a>
+            <h4>Foundation</h4>
+            <p>We developed the most advanced responsive front-end framework in 
+			the world and made it free-for-all.</p>
+            <span>Discover Foundation →</span>
+          </a>
+        </div>
+        <div class="show-on-phones"><br><br></div>
+        <div class="three columns property" id="apps">
+          <a>
+            <h4>ZURB<span class="apps">apps</span></h4>
+            <p>A powerful design suite that will help you prototype, iterate and 
+			collect feedback on your product design.</p>
+            <span>Get Started →</span>
+          </a>
+        </div>
+        
+        <div class="show-on-phones"><br><br></div>
+        <div class="three columns property" id="expo">
+          <a>
+            <h4>Expo</h4>
+            <p>We think anyone can design great products. We&#39;ll share our ideas, 
+			thoughts and design resources to show you how to do it.</p>
+            <span>Learn More →</span>
+          </a>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+		<div id="wrapper">
+			<div id="container" class="container">
+
+				
+				<div id="content">
+<br>
+			
+			<div class="column-row">
+				<div class="ten columns">
+					<h3 style="color:#fff;">The CSS</h3>
+					<ol class="code">
+						<li>ul.osx-dock li a <span class="punctuate">{</span> </li>
+						<li  class="property">display: <span class="value">
+						block;</span> </li>
+						<li class="property">height: <span class="value">50px;</span> </li>
+						<li class="property">padding: <span class="value">0 1px;</span></li>
+						<li class="property">margin: <span class="value">0; </span></li>
+						<li class="property">-webkit-transition: <span class="value">
+						0.15s linear; </span></li>
+						<li class="property">-webkit-transition-property: <span class="value">
+						-webkit-transform margin;</span> </li>
+						<li class="property">-webkit-box-reflect: <span class="value">
+						below 2px; -webkit-gradient(linear, left top, left 
+						bottom, from(transparent), color-stop(0.45, 
+						transparent), to(rgba(255, 255, 255, 0.25)));</span> </li>
+						<li><span class="punctuate">}</span></li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li a img <span class="punctuate">{</span></li>
+						<li class="property"> width: <span class="value">48px;</span></li>
+						<li><span class="punctuate">}</span></li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li:hover <span class="punctuate">{</span></li>
+						<li class="property">	margin-left: <span class="value">
+						9px;</span> margin-right: <span class="value">9px;</span></li>
+						<li class="property">	z-index: <span class="value">
+						200;</span></li>
+						<li>}</li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li:hover a <span class="punctuate">{</span></li>
+						<li class="property">	-webkit-transform-origin: <span class="value">
+						center bottom;</span> </li>
+						<li class="property">	-webkit-transform: <span class="value">
+						scale(1.5);</span> </li>
+						<li>}</li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li.nearby <span class="punctuate">{</span> </li>
+						<li class="property">	margin-left: <span class="value">
+						6px;</span> margin-right: <span class="value">6px;</span></li>
+						<li class="property">	z-index: <span class="value">
+						100;</span></li>
+						<li>} </li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li.nearby a <span class="punctuate">{</span>  </li>
+						<li class="property">	-webkit-transform-origin: <span class="value">
+						center bottom;</span> </li>
+						<li class="property">	-webkit-transform: <span class="value">
+						scale(1.25);</span> </li>
+						<li>}</li>
+						<li>&nbsp;</li>
+						<li>ul.osx-dock li span <span class="punctuate">{</span> </li>
+						<li  class="property">background: <span class="value">
+						rgba(0,0,0,0.75);</span></li> 
+						<li class="property">position: <span class="value">
+						absolute; </span>		 </li>
+						<li class="property">bottom: <span class="value">80px; 	</span>			 </li>
+						<li class="property">margin: <span class="value">0 auto; </span>			 </li>
+						<li class="property">display: <span class="value">none; </span>			 </li>
+						<li class="property">width: <span class="value">auto; 	</span>			 </li>
+						<li class="property">font-size: <span class="value">
+						11px; </span>			 </li>
+						<li class="property">font-weight: <span class="value">
+						bold;</span> 		 </li>
+						<li class="property">padding: <span class="value">3px 
+						6px;</span> 			 </li>
+						<li class="property">-webkit-border-radius: <span class="value">
+						6px;</span> </li>
+						<li class="property">color: <span class="value">#fff;</span>			 </li>
+						<li>}</li>
+						<li>ul.osx-dock li:hover span <span class="punctuate">{</span> </li>
+						<li class="property">display: <span class="value">block;</span> </li>
+						<li><span class="punctuate">}</span> </li>
+					</ol>
+				</div>
+				<div class="six columns">
+					<h3 style="color:#fff;">The HTML</h3>
+					<ol class="code">
+						
+						<li>&lt;ul class=&quot;osx-dock&quot;&gt;</li>
+						<li style="padding-left: 16px;">	&lt;li class=&quot;active&quot;&gt;</li>
+						<li style="padding-left: 32px;">		
+						&lt;span&gt;ZURB&lt;/span&gt;</li>
+						<li style="padding-left: 32px;">		&lt;a 
+						href=&quot;http://www.xwcms.net&quot; title=&quot;ZURB&quot;&gt;&lt;img 
+						src=&quot;/playground/osx-dock/zurb-icon.png&quot; /&gt;&lt;/a&gt;</li>
+						<li style="padding-left: 16px;">	&lt;/li&gt;</li>
+						<li style="padding-left: 16px;">	&lt;li&gt;</li>
+						<li style="padding-left: 32px;">		
+						&lt;span&gt;LinkedIn&lt;/span&gt;</li>
+						<li style="padding-left: 32px;">		&lt;a 
+						href=&quot;http://www.xwcms.net&quot; title=&quot;LinkedIn&quot;&gt;&lt;img 
+						src=&quot;/playground/osx-dock/linkedin-icon.png&quot; /&gt;&lt;/a&gt;</li>
+						<li style="padding-left: 16px;">	&lt;/li&gt;</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>			
+				
+	<div id="dockContainer">
+		<div id="dockWrapper">
+		
+			<div class="cap left"></div>
+			<ul class="osx-dock">
+				<li class="active">
+					<span>ZURB</span>
+					<a href="http://www.xwcms.net" title="ZURB"><img src="images/zurb-icon.png" /></a>
+				</li>
+				<li>
+					<span>LinkedIn</span>
+					<a href="http://www.xwcms.net" title="LinkedIn"><img src="images/linkedin-icon.png" /></a>
+				</li>
+				<li>
+					<span>Notable</span>
+					<a href="http://www.xwcms.net" title="Notable"><img src="images/notable-icon.png" /></a>
+				</li>
+				<li>
+					<span>last.fm</span>
+					<a href="http://www.xwcms.net" title="Last.fm"><img src="images/lastfm-icon.png" /></a>
+				</li>
+				<li>
+					<span>Facebook</span>
+					<a href="http://www.xwcms.net" title="Facebook"><img src="images/facebook-icon.png" /></a>
+				</li>
+				<li>
+					<span>Google</span>
+					<a href="http://www.xwcms.net" title="Google"><img src="images/google-icon.png" /></a>
+				</li>
+				<li>
+					<span>Notable</span>
+					<a href="http://www.xwcms.net" title="Notable"><img src="images/notable-icon.png" /></a>
+				</li>
+				<li>
+					<span>last.fm</span>
+					<a href="http://www.xwcms.net" title="Last.fm"><img src="images/lastfm-icon.png" /></a>
+				</li>
+				<li>
+					<span>Facebook</span>
+					<a href="http://www.xwcms.net" title="Facebook"><img src="images/facebook-icon.png" /></a>
+				</li>
+				<li>
+					<span>Google</span>
+					<a href="http://www.xwcms.net" title="Google"><img src="images/google-icon.png" /></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
