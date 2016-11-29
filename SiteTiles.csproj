@@ -65,6 +65,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\style.css" />
     <Content Include="css\ace\ace-ie.min.css" />
     <Content Include="css\ace\ace-rtl.min.css" />
     <Content Include="css\ace\ace-skins.min.css" />
@@ -91,6 +94,7 @@
     <Content Include="css\jquery.owl.carousel\owl.carousel.css" />
     <Content Include="css\jquery.superslides\superslides.css" />
     <Content Include="css\jquery.toastr\toastr.min.css" />
+    <Content Include="index3.html" />
     <Content Include="index2.html" />
     <Content Include="js\ace\ace-elements.min.js" />
     <Content Include="js\ace\ace-extra.min.js" />
