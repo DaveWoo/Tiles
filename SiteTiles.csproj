@@ -61,6 +61,10 @@
     <Content Include="animate.html" />
     <Content Include="carousel.html" />
     <Content Include="chart.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\ace\ace-ie.min.css" />
     <Content Include="css\ace\ace-rtl.min.css" />
     <Content Include="css\ace\ace-skins.min.css" />
@@ -87,6 +91,7 @@
     <Content Include="css\jquery.owl.carousel\owl.carousel.css" />
     <Content Include="css\jquery.superslides\superslides.css" />
     <Content Include="css\jquery.toastr\toastr.min.css" />
+    <Content Include="index2.html" />
     <Content Include="js\ace\ace-elements.min.js" />
     <Content Include="js\ace\ace-extra.min.js" />
     <Content Include="js\ace\ace.min.js" />
@@ -460,6 +465,18 @@
     <Content Include="sample\ui\mmenu.html" />
     <Content Include="sample\ui\videobg1.html" />
     <Content Include="sample\ui\videobg2.html" />
+    <Content Include="packages.config" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Shades\div_Triangle\index.html" />
     <Content Include="Shades\easyDialog v2.0\easydialog.css" />
     <Content Include="Shades\easyDialog v2.0\easydialog.js" />
@@ -651,6 +668,8 @@
     <Content Include="Shades\jquery_Dialog\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Shades\jQuery_Login\img\Thumbs.db" />
     <Content Include="Shades\jquery_SignIn_SingUp\css\Thumbs.db" />
+    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
