@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery鼠标点击弹出登陆框效果 - xw素材网</title>
+<script type="text/javascript" src="js/jquery.easydrag.handler.beta2.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.one').click(function(){
+		$('.box2').show();
+		});
+	$('.login5 a').click(function(){
+		$('.box2').hide();
+		});
+	$('.box').easydrag();
+	});
+</script>
+<style type="text/css">
+*{ padding:0px; margin:0px;}
+a{ text-decoration:none;}
+ul{ list-style-type:none;}
+.box{ float:left; position:relative; padding:1px; top:10%;  opacity:0.5;z-index:4;  opacity:1; }
+.box_bg{}
+.box2{ width:100%; height:100%; margin:0 auto; display:none; z-index:5; position:fixed; background:rgba(0, 0, 0, 0.52) none repeat scroll 0% 0%; opacity:1;}
+.login5{ width:680px; height:65px; background:#b52200; text-align:center; position:relative; margin:150px auto 0px auto;}
+.login5 h2{ font-size:30px; line-height:65px; color:#ffffff;}
+.login5 a{ background:url(img/login_reg.png) 0px 0px no-repeat; position:absolute; width:16px; height:16px; right:10px; top:25px;}
+.login51{ width:600px; padding:40px 40px 50px; margin:0 auto; background:#EFEFEF; height:300px; }
+.login5left{ float:left; width:300px; height:200px; font-size:13px;}
+.login5left span{ line-height:24px; color:#f00; margin-left:10px;}
+.login5left1{ width:100%; margin-bottom:22px; float:left; position:relative; display:block;}
+.login5left1 input{ text-indent:10px; width:296px; color:#999; font-size:13px; height:40px; line-height:40px; border:1px solid #999; border-radius:5px;}
+.login5left2{ height:45px; line-height:45px; width:100%; margin-bottom:22px; float:left; position:relative; display:block;}
+.login5left2 .dl{ float:left; width:97px; height:45px; line-height:45px; text-align:center; background:none repeat scroll 0% 0% #55ACEF; color:#fff; border-radius:5px; display:inline-block; font-size:14px; outline:medium none;}
+.login5left2 .wjmm{ color:#55ACEF; margin-left:20px;}
+.login5right{ float:left; margin-left:35px; width:220px; height:280px; border-left:1px solid #CBCBCB; padding-left:35px;}
+.login5right span{ line-height:24px; color:#f00; margin-left:10px;}
+.login5right1{ height:40px; line-height:40px; border-radius:5px; border:1px solid #55ACEF; width:100%; margin-bottom:22px; float:left; position:relative;}
+.login5right1 .sjdl{ background:url(../images/smallico.png) no-repeat 30px -28px; height:22px; line-height:20px; padding-left:60px; display:inline-block; color:#55ACEF; position:relative; margin-top:10px;}
+.login5right2{ width:100%; float:left; margin-bottom:22px; position:relative; font-size:13px; text-align:center;}
+.login5right2 .zcdl{ color:#55ACEF; font-size:14px;}
+.login5right3{ text-align:center; height:40px; line-height:40px; width:100%; float:left; margin-bottom:22px; position:relative; display:inline-block; font-size:13px;}
+.login5right3 b{ height:4px; border-top:1px solid rgb(203, 203, 203); display:inline-block; width:60px;}
+.login5right3 .found{ margin-left:8px;}
+.login5right3 .back{ margin-right:8px;}
+.login5right4{ text-align:center; width:100%; float:left; margin-bottom:22px; position:relative; display:block;}
+.login5right4 a{ background:url(../images/share.png) no-repeat; width:46px; height:46px; position:absolute;}
+.login5right4 .wb{ background-position:0px -47px; margin-left:-60px }
+.login5right4 .qq{ background-position:0px 0px;}
+</style>
+</head>
+<body>
+<input type="button" class="one" value="点击我查看效果" style="width:150px; height:50px; margin-top:50px; margin-left:300px;" />
+<div class="box">
+<div class="box2">
+	<div class="login5">
+    	<h2>登录</h2>
+        <a class="close"></a>
+    </div>
+    <div class="login51">
+    	<form name="login5form" action="">
+        	<div class="login5left">
+            	<span></span>
+                <div class="login5left1">
+                	<input type="text" name="username" placeholder="用户名/手机号/邮箱" /></input>
+                </div>
+                <div class="login5left1">
+                	<input type="password" name="user_possword" placeholder="密码" /></input>
+                </div>
+                <div class="login5left2">
+                	<a class="dl">登录</a>
+                    <a class="wjmm">忘记密码</a>
+                </div>
+            </div>
+            <div class="login5right">
+            	<span></span>
+                <div class="login5right1">
+                	<a class="sjdl">手机短信登录</a>
+                </div>
+                <div class="login5right2">
+                	没有账号？<a class="zcdl">快速注册</a>
+                </div>
+                <div class="login5right3">
+                	<b class="found"></b>合作账号登录<b class="back"></b>
+                </div>
+                <div class="login5right4">
+                	<a class="wb"></a><a class="qq"></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.xwcms.net/" target="_blank">xw素材网</a></p>
+</div>
+</body>
+</html>
