@@ -1,79 +1,88 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>jquery对话框美化插件 xcConfirm - xw素材网</title>
-		<link rel="stylesheet" type="text/css" href="css/xcConfirm.css"/>
-		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/xcConfirm.js" type="text/javascript" charset="utf-8"></script>
-		<style type="text/css">
-			.sgBtn{width: 135px; height: 35px; line-height: 35px;margin: 10px; text-align: center; background-color: #0095D9; color: #FFFFFF;border-radius:3px;}
-		</style>
-		<script type="text/javascript">
-			$(function(){
-				$("#btn1").click(function(){
-					var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-					window.wxc.xcConfirm(txt,window.wxc.xcConfirm.typeEnum.info);
-				});
-				$("#btn2").click(function(){
-					var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.confirm);
-				});
-				$("#btn3").click(function(){
-					var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.warning);
-				});
-				$("#btn4").click(function(){
-					var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.error);
-				});
-				$("#btn5").click(function(){
-					var txt=  "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.success);
-				});
-				$("#btn6").click(function(){
-					var txt=  "请输入";
-					window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.input,{
-						onOk:function(v){
-							alert(v);
-						}
-					});
-				});
-				$("#btn7").click(function(){
-					var txt=  "xw素材网专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在xw素材网免费素材网";
-					var option = {
-						title: "xw素材网",
-						btn: parseInt("0011",2),
-						onOk: function(){
-							alert("确认啦");
-						},
-						onCancel:function(){
-							alert("取消啦");	
-						},
-						onClose:function(){
-							alert("关闭啦");	
-						}
-					}
-					window.wxc.xcConfirm(txt, "custom", option);
-				});
-				$("#btn8").click(function(){
-					var txt=  "默认";
-					window.wxc.xcConfirm(txt);
-				});
-			});
-		</script>
-	</head>
-	<body>
-    	<br/><br/><br/><br/><br/>
-    	<center>		
-			<div class="sgBtn" id="btn1">弹窗1(信息)</div>
-			<div class="sgBtn" id="btn2">弹窗2(提示)</div>
-			<div class="sgBtn" id="btn3">弹窗3(警告)</div>
-			<div class="sgBtn" id="btn4">弹窗4(错误)</div>
-			<div class="sgBtn" id="btn5">弹窗5(成功)</div>
-			<div class="sgBtn" id="btn6">弹窗6(输入框)</div>
-			<div class="sgBtn" id="btn7">弹窗7(自定义)</div>
-			<div class="sgBtn" id="btn8">弹窗8(默认)</div>
-        </center>
-	</body>
+<head>
+    <meta charset="utf-8" />
+    <title>jquery对话框美化插件 xcConfirm - xw素材网</title>
+    <link rel="stylesheet" type="text/css" href="css/xcConfirm.css" />
+    <script src="../../Scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="js/xcConfirm.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        .sgBtn {
+            width: 135px;
+            height: 35px;
+            line-height: 35px;
+            margin: 10px;
+            text-align: center;
+            background-color: #0095D9;
+            color: #FFFFFF;
+            border-radius: 3px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                var txt = "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.info);
+            });
+            $("#btn2").click(function () {
+                var txt = "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.confirm);
+            });
+            $("#btn3").click(function () {
+                var txt = "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.warning);
+            });
+            $("#btn4").click(function () {
+                var txt = "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.error);
+            });
+            $("#btn5").click(function () {
+                var txt = "提示文字，提示文字，提示文字，提示文字，提示文字，提示文字";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.success);
+            });
+            $("#btn6").click(function () {
+                var txt = "请输入";
+                window.wxc.xcConfirm(txt, window.wxc.xcConfirm.typeEnum.input, {
+                    onOk: function (v) {
+                        alert(v);
+                    }
+                });
+            });
+            $("#btn7").click(function () {
+                var txt = "xw素材网专注于提供免费素材下载,其内容涵盖设计素材,PSD素材,矢量素材,图片素材,图标素材,设计字体等免费素材.下载免费素材尽在xw素材网免费素材网";
+                var option = {
+                    title: "xw素材网",
+                    btn: parseInt("0011", 2),
+                    onOk: function () {
+                        alert("确认啦");
+                    },
+                    onCancel: function () {
+                        alert("取消啦");
+                    },
+                    onClose: function () {
+                        alert("关闭啦");
+                    }
+                }
+                window.wxc.xcConfirm(txt, "custom", option);
+            });
+            $("#btn8").click(function () {
+                var txt = "默认";
+                window.wxc.xcConfirm(txt);
+            });
+        });
+    </script>
+</head>
+<body>
+    <br /><br /><br /><br /><br />
+    <center>
+        <div class="sgBtn" id="btn1">弹窗1(信息)</div>
+        <div class="sgBtn" id="btn2">弹窗2(提示)</div>
+        <div class="sgBtn" id="btn3">弹窗3(警告)</div>
+        <div class="sgBtn" id="btn4">弹窗4(错误)</div>
+        <div class="sgBtn" id="btn5">弹窗5(成功)</div>
+        <div class="sgBtn" id="btn6">弹窗6(输入框)</div>
+        <div class="sgBtn" id="btn7">弹窗7(自定义)</div>
+        <div class="sgBtn" id="btn8">弹窗8(默认)</div>
+    </center>
+</body>
 </html>

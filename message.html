@@ -27,6 +27,10 @@
     <div class="maincontent row form-horizontal">
         <!--我是主要内容 start-->
         <ul class="breadcrumb">
+            <li>
+                <i class="fa fa-home fa-lg" aria-hidden="true"></i>
+                <a href="#">Home</a>
+            </li>
             <li class="active">Message库</li>
         </ul>
         <div class="col-sm-12">
@@ -70,14 +74,14 @@
                     }
                 </style>
                 <script>
-                        $(function () {
-                            $("#btnShowMsg1").click(function () {
-                                toastr.options = {
-                                    "progressBar": true
-                                }
-                                toastr.info('Are you the 6 fingered man?');
-                            })
+                    $(function () {
+                        $("#btnShowMsg1").click(function () {
+                            toastr.options = {
+                                "progressBar": true
+                            }
+                            toastr.info('Are you the 6 fingered man?');
                         })
+                    })
                 </script>
                 <div class="col-sm-6">
                     <div class="form-group">
@@ -124,11 +128,11 @@
                 <link href="css/bootstrap.sweetalert/sweet-alert.css" rel="stylesheet" />
                 <script src="js/bootstrap.sweetalert/sweet-alert.min.js"></script>
                 <script>
-                        $(function () {
-                            $("#btnShowMsg2").click(function () {
-                                swal("Here's a message!");
-                            })
+                    $(function () {
+                        $("#btnShowMsg2").click(function () {
+                            swal("Here's a message!");
                         })
+                    })
                 </script>
                 <div class="col-sm-6">
                     <div class="form-group">

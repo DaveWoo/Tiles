@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>jquery插件</title>
+    <link rel="stylesheet" href="css/xwcms.css" type="text/css" media="all" />
+    <script type="text/javascript" src="http://www.xwcms.net:80/templets/default/images/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sweet-menu-1.0.js"></script>
+</head>
+<body>
+    <!--左侧浮动菜单-->
+    <ul id="exampleMenu">
+        <li><a href="./" alt="返回首页">返回首页</a></li>
+        <li><a href="./js/list/jquerytx/jquerytx_1.html" alt="jquery特效">Jquery</a></li>
+        <li><a href="./js/list/html5-css3/html5-css3_1.html" alt="html5/css3">HTML5</a></li>
+        <li><a href="./ps/list/wysc/wysc_1.html" alt="网页素材">网页素材</a></li>
+        <li><a href="./js/list/wymb/wymb_1.html" alt="网页设计">网页模版</a></li>
+
+        <li><a href="#home">教程下载</a></li>
+        <li><a href="#home">在线视频</a></li>
+
+    </ul>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#backMenu').sweetMenu({
+                top: 40,
+                padding: 8,
+                iconSize: 48,
+                easing: 'easeOutBounce',
+                duration: 500,
+                icons: [
+                    'http://www.xwcms.net:80/templets/default/images/back.png'
+                ]
+            });
+            $('#exampleMenu').sweetMenu({
+                top: 100,
+                padding: 8,
+                iconSize: 48,
+                easing: 'easeOutBounce',
+                duration: 500,
+                icons: [
+                    'http://www.xwcms.net:80/templets/default/images/home.png',
+                    'http://www.xwcms.net:80/templets/default/images/jquery.png',
+                    'http://www.xwcms.net:80/templets/default/images/html5.png',
+                    'http://www.xwcms.net:80/templets/default/images/wysc.png',
+                    'http://www.xwcms.net:80/templets/default/images/wysj.png',
+                    'http://www.xwcms.net:80/templets/default/images/computer.png',
+                    'http://www.xwcms.net:80/templets/default/images/jcxz.png',
+                    'http://www.xwcms.net:80/templets/default/images/ymxz.png'
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
