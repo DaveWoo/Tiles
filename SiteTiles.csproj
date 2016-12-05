@@ -145,6 +145,8 @@
     <Content Include="css\ace\ace-rtl.min.css" />
     <Content Include="css\ace\ace-skins.min.css" />
     <Content Include="css\ace\ace.min.css" />
+    <Content Include="css\ace\font-awesome-ie7.min.css" />
+    <Content Include="css\ace\font-awesome.min.css" />
     <Content Include="css\bootstrap.datepicker\bootstrap-datepicker3.min.css" />
     <Content Include="css\bootstrap.datetimepicker\bootstrap-datetimepicker.min.css" />
     <Content Include="css\bootstrap.formhelper\css\bootstrap-formhelpers.min.css" />
@@ -167,6 +169,7 @@
     <Content Include="css\jquery.owl.carousel\owl.carousel.css" />
     <Content Include="css\jquery.superslides\superslides.css" />
     <Content Include="css\jquery.toastr\toastr.min.css" />
+    <Content Include="index.html" />
     <Content Include="index2.html" />
     <Content Include="js\ace\ace-elements.min.js" />
     <Content Include="js\ace\ace-extra.min.js" />
