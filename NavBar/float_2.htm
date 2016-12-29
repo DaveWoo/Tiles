@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>CsrCode.Cn</title>
+    <style type="text/css">
+    *{ margin:0; padding:0;}
+    .nav-wrapper-fixed{ position:fixed; top:0; width:100%;}
+    .nav-wrapper-fixed .nav{width:960px; margin:0 auto;}
+    .nav-wrapper-fixed .nav li{ float:left; width:100px; margin-right:5px; background:#CCC; text-align:center; height:24px; line-height:24px; list-style:none;}
+    .nav-wrapper{ margin-top:100px; width:100%;}
+    .nav-wrapper .nav{width:960px; margin:0 auto;}
+    .nav-wrapper .nav li{ float:left; width:100px; margin-right:5px; background:#CCC; text-align:center; height:24px; line-height:24px; list-style:none;}
+    </style>
+    <script type="text/javascript">
+    window.onload=function(){
+    var nav=document.getElementById('nav');
+    var navFixed=document.getElementById('navFixed');
+    window.onscroll=function(){
+    var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+    document.title=scrollTop
+    if(scrollTop>nav.offsetTop){
+    navFixed.style.display='block';
+    }else if(scrollTop<nav.offsetTop){
+    navFixed.style.display='none';
+    }
+    }
+    };
+    </script>
+    </head>
+    <body style="height:2000px;">
+    <div class="nav-wrapper">
+    <div class="nav" id="nav">
+    <ul>
+    <li><a target="_blank" href="http://www.CsrCode.cn/">A</a></li>
+    <li><a target="_blank" href="http://www.7caidy.com/">B</a></li>
+    <li><a target="_blank" href="http://www.33567.cn/">B</a></li>
+    <li><a target="_blank" href="http://Changshi.CsrCode.Cn/">D</a></li>
+    <li><a target="_blank" href="http://bbs.33567.cn/">E</a></li>
+    <li><a target="_blank" href="http://dir.33567.cn/">F</a></li>
+    </ul>
+    </div>
+    </div>
+    <div class="nav-wrapper-fixed" id="navFixed" style="display:none;">
+    <div class="nav" id="nav">
+    <ul>
+    <li><a target="_blank" href="http://www.CsrCode.cn/">A</a></li>
+    <li><a target="_blank" href="http://www.7caidy.com/">B</a></li>
+    <li><a target="_blank" href="http://www.33567.cn/">C</a></li>
+    <li><a target="_blank" href="http://Changshi.CsrCode.Cn/">D</a></li>
+    <li><a target="_blank" href="http://bbs.33567.cn/">E</a></li>
+    <li><a target="_blank" href="http://dir.33567.cn/">F</a></li>
+    </ul>
+    </div>
+    </div>
+    </body>
+    </html>
+    <br><br><br><br><br><br><br><hr/><p align="center"><font color=black>BBB <a href="http://www.CsrCode.cn" target="_blank">CCC</a></font></p>
+    
